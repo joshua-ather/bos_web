@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#1E375B">
 
     <title>@yield('title')</title>
-    <link rel="icon" type="image/png" sizes="48x48" href="">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('img/icon.ico') }}">
 
     @stack('script_begin')
 </head>

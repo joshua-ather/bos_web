@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#1E375B">
 
     <title><?php echo $__env->yieldContent('title'); ?></title>
-    <link rel="icon" type="image/png" sizes="48x48" href="">
+    <link rel="icon" type="image/png" sizes="48x48" href="<?php echo e(asset('img/icon.ico')); ?>">
 
     <?php echo $__env->yieldPushContent('script_begin'); ?>
 </head>

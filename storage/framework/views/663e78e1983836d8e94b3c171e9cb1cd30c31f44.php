@@ -3,7 +3,7 @@
     
     <div class="brand-link">
         <a href="/" id="logo_brand">
-            <img src="<?php echo e(asset('img/logo/logo.png')); ?>" alt="BOS Logo" class="brand-image">
+            <img src="<?php echo e(asset('img/logo.png')); ?>" alt="BOS Logo" class="brand-image">
         </a>
     </div>
 
