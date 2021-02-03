@@ -1,145 +1,87 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+{{-- Main Sidebar Container --}}
+<aside class="main-sidebar sidebar-dark-primary">
+    {{-- Brand Logo --}}
+    <div class="brand-link">
+        <a href="/">
+            <img src="{{ asset('img/logo/logo.png') }}" alt="BOS Logo" class="brand-image">
+        </a>
+    </div>
 
-    <!-- Sidebar -->
+    {{-- Sidebar --}}
     <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
-            </div>
-        </div>
-
-        <!-- Sidebar Menu -->
+        {{-- Sidebar Menu --}}
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 20 20"><title>ico_dashboard</title><path d="M297.4,425v3.9c0,1.4-.4,1.9-1.8,1.9h-5.5c-1.4,0-1.8-.5-1.8-1.9s-.1-5.2,0-7.9.4-1.9,1.8-1.9h5.5c1.4,0,1.8.5,1.8,1.9Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M308.2,416.7c0,1.3.1,2.6,0,4s-.4,1.7-1.7,1.7h-5.7c-1.2.1-1.7-.5-1.7-1.6v-8.3c0-1.2.5-1.7,1.8-1.7h5.6c1.3,0,1.7.5,1.7,1.7S308.2,415.3,308.2,416.7Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M303.6,424.1h3a1.4,1.4,0,0,1,1.6,1.6c.1,1.2,0,2.3.1,3.4a1.5,1.5,0,0,1-1.6,1.7h-6.1a1.4,1.4,0,0,1-1.5-1.6c0-1.2-.1-2.4,0-3.5a1.4,1.4,0,0,1,1.5-1.6Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M292.8,417.4h-2.9a1.4,1.4,0,0,1-1.6-1.6,18.2,18.2,0,0,1,0-3.3c0-1.1.5-1.7,1.5-1.7h6a1.4,1.4,0,0,1,1.6,1.6v3.4a1.4,1.4,0,0,1-1.6,1.6Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>Dashboard</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link active">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Widgets
-                            <span class="right badge badge-danger">New</span>
-                        </p>
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 20 20"><title>ico_users</title><path d="M298.2,430.7h-8.1c-1.8-.1-2.2-.7-1.5-2.4a25.6,25.6,0,0,1,2.7-4.5,2.3,2.3,0,0,1,3.5-.3c2.4,2.1,4.8,2,7.3,0s2.1-.9,3,.2a15.9,15.9,0,0,1,3,5.4c.4,1-.1,1.5-1.4,1.5Z" transform="translate(-288.3 -410.6)" fill="#ffffff"/><path d="M293,415.9a5.2,5.2,0,0,1,3-4.7,4.9,4.9,0,0,1,5.3.5,6,6,0,0,1,2.1,6c-.8,4.3-5,6.2-8.2,3.8C293.8,420.4,293,418.5,293,415.9Z" transform="translate(-288.3 -410.6)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>Customer</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Layout Options
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
-                        </p>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 18 20.1"><title>ico_pesanan</title><path d="M298.2,430.1h-6.6c-1.6,0-2.3-.7-2.3-2.3-.1-4.5-.1-8.9,0-13.3,0-1.6.7-2.3,2.3-2.4h1.9a2.5,2.5,0,0,0,2.7-1.1,2.7,2.7,0,0,1,4.4.4,1.8,1.8,0,0,0,1.6.8h3a2,2,0,0,1,2,2.1c.1,4.6.1,9.3,0,13.9a1.9,1.9,0,0,1-2.1,2Zm0-12h4.3c.9,0,.7-.5.7-1.1s.2-1-.7-1H294c-.9,0-.7.5-.7,1s-.2,1.1.7,1.1Zm.2,2H294c-.9,0-.7.5-.7,1s-.2,1.1.7,1.1h8.5c.9,0,.7-.6.7-1.1s.2-1-.7-1Zm-1.7,6h2.7c.9,0,.9-.4.9-1s.1-1.1-.9-1.1h-5.2c-.8,0-1,.2-1,1s.2,1.1,1.1,1.1Zm1.5-12c.6,0,1-.3,1-.9a1,1,0,0,0-1.9-.1C297.2,413.7,297.6,414,298.2,414.1Z" transform="translate(-289.2 -410.1)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>Order</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Top Navigation</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/boxed.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Boxed</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Fixed Sidebar</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Fixed Navbar</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/fixed-footer.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Fixed Footer</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Collapsed Sidebar</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>
-                            Charts
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18"><title>mdi_build</title><path d="M292,412.9c2.3-1,4.1-.8,5.7.4a4.9,4.9,0,0,1,2.1,5.1,2.1,2.1,0,0,0,.6,2l6.2,6.1c.8.8.7,1.3,0,2-2.4,2.3-1.9,2.3-4.2,0s-3.5-3.4-5.2-5.2a1.5,1.5,0,0,0-1.7-.5,5.4,5.4,0,0,1-6.1-6.7c.2-.6.4-1,1-.3a9.3,9.3,0,0,0,1.4,1.4c1.5,1.5,1.5,1.5,3,.1s.9-1.3,0-2Z" transform="translate(-289.2 -412.3)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>CS - 58</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/charts/chartjs.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>ChartJS</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Flot</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/inline.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Inline</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 20 20"><title>ico_inventory</title><path d="M297.4,425v3.9c0,1.4-.4,1.9-1.8,1.9h-5.5c-1.4,0-1.8-.5-1.8-1.9s-.1-5.2,0-7.9.4-1.9,1.8-1.9h5.5c1.4,0,1.8.5,1.8,1.9Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M308.2,416.7c0,1.3.1,2.6,0,4s-.4,1.7-1.7,1.7h-5.7c-1.2.1-1.7-.5-1.7-1.6v-8.3c0-1.2.5-1.7,1.8-1.7h5.6c1.3,0,1.7.5,1.7,1.7S308.2,415.3,308.2,416.7Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M303.6,424.1h3a1.4,1.4,0,0,1,1.6,1.6c.1,1.2,0,2.3.1,3.4a1.5,1.5,0,0,1-1.6,1.7h-6.1a1.4,1.4,0,0,1-1.5-1.6c0-1.2-.1-2.4,0-3.5a1.4,1.4,0,0,1,1.5-1.6Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/><path d="M292.8,417.4h-2.9a1.4,1.4,0,0,1-1.6-1.6,18.2,18.2,0,0,1,0-3.3c0-1.1.5-1.7,1.5-1.7h6a1.4,1.4,0,0,1,1.6,1.6v3.4a1.4,1.4,0,0,1-1.6,1.6Z" transform="translate(-288.2 -410.8)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>Inventory</p>
+                    </a>
                 </li>
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
+        {{-- /.sidebar-menu --}}
+        <div class="nav mt-4">
+            <div class="nav-link nav-info">
+                <div class="side-title">Bengkel</div>
+                <div>Bos Kedoya</div>
+            </div>
+        </div>
+        <div class="nav mt-0">
+            <div class="nav-link nav-info">
+                <div class="side-title">SR / NIK</div>
+                <div>
+                    <div>Rachmat Hidayat</div>
+                    <div>12346789</div>
+                </div>
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="nav-icon">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18"><title>mdi_exit_to_app</title><path d="M289.2,424.2h2v3.9h14V414.2H291.3v3.9h-2c0-1.4-.1-2.9,0-4.3a1.8,1.8,0,0,1,2-1.7h13.9a1.9,1.9,0,0,1,2,2.1c.1,4.5.1,9.1,0,13.6a1.9,1.9,0,0,1-2.2,2.2H291.5a1.9,1.9,0,0,1-2.2-2.2C289.2,426.7,289.2,425.5,289.2,424.2Z" transform="translate(-289.2 -412.1)" fill="#ffffff"/><path d="M302.5,421.2l-4.8,4.9-1.3-1.6,2.9-2.3h-10v-2h9.9l-3-2.5,1.4-1.4Z" transform="translate(-289.2 -412.1)" fill="#ffffff"/></svg>
+                        </i>
+                        <p>LOGOUT</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <!-- /.sidebar -->
+    {{-- /.sidebar --}}
 </aside>

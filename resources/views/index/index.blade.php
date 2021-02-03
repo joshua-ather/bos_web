@@ -8,7 +8,7 @@
     {{-- IonIcons --}}
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/plugin/ionicons/css/ionicons.min.css') }}">
     {{-- Theme style --}}
-    <link rel="stylesheet" href="{{ asset('vendor/adminlte/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/css/adminlte.css') }}">
     {{-- My CSS --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endpush

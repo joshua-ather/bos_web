@@ -1,0 +1,51 @@
+:root {
+  --primary: #1E375B;
+  --secondary: #68829D;
+  --green: #58BFA0;
+  --orange: #EC9023;
+  --red: #FC8787;
+  --black: #434343;
+  --gray: #AAAAAA;
+  --white: #E8E8E8;
+  --base: #FFFFFF;
+  --button: #9CB9D8;
+  --accent: #458796;
+  --font-family: "Lato";
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/font/Lato-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/font/Lato-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/font/Lato-Bold.ttf");
+  font-weight: 500;
+}
+body {
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 36px !important;
+}
+
+.main-sidebar * {
+  color: var(--white);
+}
+.main-sidebar * .nav-info {
+  display: block;
+  width: 100%;
+}
+.main-sidebar * .side-title {
+  color: var(--green);
+}
+
+/*# sourceMappingURL=app.css.map */
