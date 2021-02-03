@@ -52,6 +52,10 @@ body {
   }
 }
 
+*:focus {
+  outline: none;
+}
+
 h1 {
   font-size: var(--font-size-large) !important;
 }
@@ -98,7 +102,7 @@ h1 {
   margin-left: -16px;
   text-align: center;
   appearance: none;
-  font-weight: var(--font-reguler);
+  font-weight: var(--font-bold);
 }
 
 .thin-text {
@@ -262,4 +266,9 @@ table.table-510 {
     border-radius: 50%;
     padding: 0 5px;
   }
+}
+
+.knob {
+  color: var(--black) !important;
+  font: 500 14px var(--font-family) !important;
 }

@@ -31,8 +31,8 @@
                         <div class="card-body">
                             <div class="row my-3">
                                 <div class="col text-center">
-                                    <input type="text" class="knob" value="35" data-fgColor="#58BFA0">
-                                    <div class="element-knob medium-text">35%</div>
+                                    <input id="fast_knob" type="text" class="knob" value="0" data-fgColor="#58BFA0">
+                                    {{--<div class="element-knob medium-text">35%</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -49,8 +49,8 @@
                         <div class="card-body">
                             <div class="row my-3">
                                 <div class="col text-center">
-                                    <input type="text" class="knob" value="45" data-fgColor="#EC9023">
-                                    <div class="element-knob medium-text">45%</div>
+                                    <input id="medium_knob" type="text" class="knob" value="45" data-fgColor="#EC9023">
+                                    {{--<div class="element-knob medium-text">45%</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                         <div class="card-body">
                             <div class="row my-3">
                                 <div class="col text-center">
-                                    <input type="text" class="knob" value="20" data-fgColor="#FC8787">
-                                    <div class="element-knob medium-text">20%</div>
+                                    <input id="slow_knob" type="text" class="knob" value="20" data-fgColor="#FC8787">
+                                    {{--<div class="element-knob medium-text">20%</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                     <span class="ml-4 thin-text">Last Update : 7 Januari 2021</span>
                 </div>
                 <div class="col-lg-12">
-                    <table class="table table-hover dataTable table-510">
+                    <table id="table_inventory" class="table table-hover dataTable table-510">
                         <thead>
                             <tr>
                                 <th>
@@ -426,34 +426,8 @@
             {{-- /.row --}}
             <div class="row">
                 <div class="col-lg-12 mt-1 mb-4">
-                    <div class="justify-content-center d-flex nav-page-table">
-                        <a href="">
-                            <i>
-                                <svg width="13px" height="13px" viewBox="0 0 4.9 10.5" style="transform: rotate(90deg)"><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#AAAAAA"/></svg>
-                            </i>
-                            <span class="small-text mx-2">Prev</span>
-                        </a>
-                        <a href="" class="active mx-2">
-                            <span class="small-text">1</span>
-                        </a>
-                        <a href="" class="mx-2">
-                            <span class="small-text">2</span>
-                        </a>
-                        <a href="" class="mx-2">
-                            <span class="small-text">3</span>
-                        </a>
-                        <a href="" class="mx-2">
-                            <span class="small-text">4</span>
-                        </a>
-                        <a href="" class="mx-2">
-                            <span class="small-text">5</span>
-                        </a>
-                        <a href="" class="mx-2">
-                            <span class="small-text">Next</span>
-                            <i>
-                                <svg width="13px" height="13px" viewBox="0 0 4.9 10.5" style="transform: rotate(-90deg)"><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#AAAAAA"/></svg>
-                            </i>
-                        </a>
+                    <div id="nav_table" class="justify-content-center d-flex nav-page-table">
+
                     </div>
                 </div>
             </div>

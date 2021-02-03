@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary">
     {{-- Brand Logo --}}
     <div class="brand-link">
-        <a href="/">
+        <a href="/" id="logo_brand">
             <img src="{{ asset('img/logo/logo.png') }}" alt="BOS Logo" class="brand-image">
         </a>
     </div>
@@ -58,15 +58,15 @@
         <div class="nav mt-4">
             <div class="nav-link nav-info">
                 <div class="side-title">Bengkel</div>
-                <div>Bos Kedoya</div>
+                <div id="workshop_10">Bos Kedoya</div>
             </div>
         </div>
         <div class="nav mt-0">
             <div class="nav-link nav-info">
                 <div class="side-title">SR / NIK</div>
                 <div>
-                    <div>Rachmat Hidayat</div>
-                    <div>12346789</div>
+                    <div id="user_10">Rachmat</div>
+                    <div id="user_20">12346789</div>
                 </div>
             </div>
         </div>

@@ -35,9 +35,9 @@
     <script src="{{ asset('vendor/adminlte/plugin/sparklines/sparkline.js') }}"></script>
 
     {{-- Plugin Script --}}
-    <script src="{{ asset('vendor/adminlte/plugin/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ asset('vendor/adminlte/js/demo.js') }}"></script>
-    <script src="{{ asset('vendor/adminlte/js/dashboard3.js') }}"></script>
+{{--    <script src="{{ asset('vendor/adminlte/plugin/chart.js/Chart.min.js') }}"></script>--}}
+{{--    <script src="{{ asset('vendor/adminlte/js/demo.js') }}"></script>--}}
+{{--    <script src="{{ asset('vendor/adminlte/js/dashboard3.js') }}"></script>--}}
 
     <script>
         $(function() {
@@ -49,9 +49,12 @@
                 'height': 150,
                 'dynamicDraw': true,
                 'tickColorizeValues': true,
-                'skin':'tron',
-                'displayInput': false,
-                'rotation': 'anticlockwise'
+                // 'skin':'tron',
+                // 'displayInput': false,
+                'rotation': 'anticlockwise',
+                'format' : function (value) {
+                    return value + '%';
+                }
             });
         });
     </script>
