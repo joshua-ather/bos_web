@@ -1680,7 +1680,7 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  vertical-align: middle;
   border-top: 1px solid #dee2e6;
 }
 
@@ -4769,8 +4769,8 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 0 solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
 }
 
 .card > hr {
@@ -19135,7 +19135,7 @@ html.maximized-card {
 .card-header {
   background-color: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.25rem;
   position: relative;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -22110,7 +22110,7 @@ body.iframe-mode-fullscreen {
 }
 
 .content-wrapper {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 .content-wrapper.iframe-mode .navbar-nav {

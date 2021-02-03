@@ -3,18 +3,16 @@
     {{-- Content Header (Page header) --}}
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row my-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Dashboard v3</h1>
-                </div>{{-- /.col --}}
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v3</li>
-                    </ol>
-                </div>{{-- /.col --}}
-            </div>{{-- /.row --}}
-        </div>{{-- /.container-fluid --}}
+                    <h1 class="m-0">Dashboard</h1>
+                </div>
+                <div class="col-sm-6 title-right">
+                    {{ date('d ') . month_indo(date('m'), 'mmm') . date(' Y - H:m') }}
+                </div>
+            </div>
+        </div>
+        {{-- /.container-fluid --}}
     </div>
     {{-- /.content-header --}}
 
@@ -22,250 +20,442 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
-                                <h3 class="card-title">Online Store Visitors</h3>
-                                <a href="javascript:void(0);">View Report</a>
+                                <h3 class="card-title medium-text">Fast Moving</h3>
+                                <span class="thin-text">Last Update : 7 Januari 2021</span>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="d-flex">
-                                <p class="d-flex flex-column">
-                                    <span class="text-bold text-lg">820</span>
-                                    <span>Visitors Over Time</span>
-                                </p>
-                                <p class="ml-auto d-flex flex-column text-right">
-                    <span class="text-success">
-                      <i class="fas fa-arrow-up"></i> 12.5%
-                    </span>
-                                    <span class="text-muted">Since last week</span>
-                                </p>
-                            </div>
-                            {{-- /.d-flex --}}
-
-                            <div class="position-relative mb-4">
-                                <canvas id="visitors-chart" height="200"></canvas>
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-end">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> This Week
-                  </span>
-
-                                <span>
-                    <i class="fas fa-square text-gray"></i> Last Week
-                  </span>
+                            <div class="row my-3">
+                                <div class="col text-center">
+                                    <input type="text" class="knob" value="35" data-fgColor="#58BFA0">
+                                    <div class="element-knob medium-text">35%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {{-- /.card --}}
-
-                    <div class="card">
-                        <div class="card-header border-0">
-                            <h3 class="card-title">Products</h3>
-                            <div class="card-tools">
-                                <a href="#" class="btn btn-tool btn-sm">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <a href="#" class="btn btn-tool btn-sm">
-                                    <i class="fas fa-bars"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-body p-0">
-                            <table class="table table-striped table-valign-middle">
-                                <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Sales</th>
-                                    <th>More</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="dist/img/default-150x150.png" alt="Product 1"
-                                             class="img-circle img-size-32 mr-2">
-                                        Some Product
-                                    </td>
-                                    <td>$13 USD</td>
-                                    <td>
-                                        <small class="text-success mr-1">
-                                            <i class="fas fa-arrow-up"></i>
-                                            12%
-                                        </small>
-                                        12,000 Sold
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="dist/img/default-150x150.png" alt="Product 1"
-                                             class="img-circle img-size-32 mr-2">
-                                        Another Product
-                                    </td>
-                                    <td>$29 USD</td>
-                                    <td>
-                                        <small class="text-warning mr-1">
-                                            <i class="fas fa-arrow-down"></i>
-                                            0.5%
-                                        </small>
-                                        123,234 Sold
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="dist/img/default-150x150.png" alt="Product 1"
-                                             class="img-circle img-size-32 mr-2">
-                                        Amazing Product
-                                    </td>
-                                    <td>$1,230 USD</td>
-                                    <td>
-                                        <small class="text-danger mr-1">
-                                            <i class="fas fa-arrow-down"></i>
-                                            3%
-                                        </small>
-                                        198 Sold
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="dist/img/default-150x150.png" alt="Product 1"
-                                             class="img-circle img-size-32 mr-2">
-                                        Perfect Item
-                                        <span class="badge bg-danger">NEW</span>
-                                    </td>
-                                    <td>$199 USD</td>
-                                    <td>
-                                        <small class="text-success mr-1">
-                                            <i class="fas fa-arrow-up"></i>
-                                            63%
-                                        </small>
-                                        87 Sold
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    {{-- /.card --}}
                 </div>
-                {{-- /.col-md-6 --}}
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
-                                <h3 class="card-title">Sales</h3>
-                                <a href="javascript:void(0);">View Report</a>
+                                <h3 class="card-title medium-text">Medium Moving</h3>
+                                <span class="thin-text">Last Update : 7 Januari 2021</span>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="d-flex">
-                                <p class="d-flex flex-column">
-                                    <span class="text-bold text-lg">$18,230.00</span>
-                                    <span>Sales Over Time</span>
-                                </p>
-                                <p class="ml-auto d-flex flex-column text-right">
-                    <span class="text-success">
-                      <i class="fas fa-arrow-up"></i> 33.1%
-                    </span>
-                                    <span class="text-muted">Since last month</span>
-                                </p>
-                            </div>
-                            {{-- /.d-flex --}}
-
-                            <div class="position-relative mb-4">
-                                <canvas id="sales-chart" height="200"></canvas>
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-end">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> This year
-                  </span>
-
-                                <span>
-                    <i class="fas fa-square text-gray"></i> Last year
-                  </span>
+                            <div class="row my-3">
+                                <div class="col text-center">
+                                    <input type="text" class="knob" value="45" data-fgColor="#EC9023">
+                                    <div class="element-knob medium-text">45%</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {{-- /.card --}}
-
+                </div>
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header border-0">
-                            <h3 class="card-title">Online Store Overview</h3>
-                            <div class="card-tools">
-                                <a href="#" class="btn btn-sm btn-tool">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                                <a href="#" class="btn btn-sm btn-tool">
-                                    <i class="fas fa-bars"></i>
-                                </a>
+                            <div class="d-flex justify-content-between">
+                                <h3 class="card-title medium-text">Slow Moving</h3>
+                                <span class="thin-text">Last Update : 7 Januari 2021</span>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
-                                <p class="text-success text-xl">
-                                    <i class="ion ion-ios-refresh-empty"></i>
-                                </p>
-                                <p class="d-flex flex-column text-right">
-                    <span class="font-weight-bold">
-                      <i class="ion ion-android-arrow-up text-success"></i> 12%
-                    </span>
-                                    <span class="text-muted">CONVERSION RATE</span>
-                                </p>
+                            <div class="row my-3">
+                                <div class="col text-center">
+                                    <input type="text" class="knob" value="20" data-fgColor="#FC8787">
+                                    <div class="element-knob medium-text">20%</div>
+                                </div>
                             </div>
-                            {{-- /.d-flex --}}
-                            <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
-                                <p class="text-warning text-xl">
-                                    <i class="ion ion-ios-cart-outline"></i>
-                                </p>
-                                <p class="d-flex flex-column text-right">
-                    <span class="font-weight-bold">
-                      <i class="ion ion-android-arrow-up text-warning"></i> 0.8%
-                    </span>
-                                    <span class="text-muted">SALES RATE</span>
-                                </p>
-                            </div>
-                            {{-- /.d-flex --}}
-                            <div class="d-flex justify-content-between align-items-center mb-0">
-                                <p class="text-danger text-xl">
-                                    <i class="ion ion-ios-people-outline"></i>
-                                </p>
-                                <p class="d-flex flex-column text-right">
-                    <span class="font-weight-bold">
-                      <i class="ion ion-android-arrow-down text-danger"></i> 1%
-                    </span>
-                                    <span class="text-muted">REGISTRATION RATE</span>
-                                </p>
-                            </div>
-                            {{-- /.d-flex --}}
                         </div>
                     </div>
                 </div>
                 {{-- /.col-md-6 --}}
+            </div>
+            {{-- /.row --}}
+            <div class="row" id="content-table">
+                <div class="col-lg-12 mt-2 mb-4 d-flex align-items-lg-center">
+                    <span class="medium-text text-bold">INVENTORY LIST</span>
+                    <span class="ml-4 thin-text">Last Update : 7 Januari 2021</span>
+                </div>
+                <div class="col-lg-12">
+                    <table class="table table-hover dataTable table-510">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Alarm</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area alarm">
+                                        <select class="alarm-select" name="alarm" id="alarm">
+                                            <option value="" selected></option>
+                                            <option value="">Red</option>
+                                            <option value="">Orange</option>
+                                            <option value="">Green</option>
+                                        </select>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Status Moving</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>No SKU</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Kategori</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Nama Item</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Demand</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Min</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Max</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Stock</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>On Order</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Lead Time</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="title-head">
+                                        <span>Sgt. Order</span>
+                                        <i class="filter-icon">
+                                            <svg width="10px" height="10px" viewBox="0 0 4.9 10.5"><title>ico_sort</title><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#ffffff"/></svg>
+                                        </i>
+                                    </div>
+                                    <div class="search-area">
+                                        <input class="input" type="text">
+                                        <i class="input-icon">
+                                            <svg width="13px" height="13px" viewBox="0 0 11.5 11.5"><title>mdi_search</title><path d="M292.4,419.7a4.4,4.4,0,0,1,2.7-4.1,4.4,4.4,0,0,1,5.6,5.8c-.4.7-.4,1.1.4,1.6a18.8,18.8,0,0,1,2.5,2.4c.4.4.4.7,0,1s-.6.6-1,.2a16.4,16.4,0,0,1-2.6-2.7c-.5-.9-.9-.6-1.4-.3A4.4,4.4,0,0,1,292.4,419.7Zm7.3,0a3.1,3.1,0,0,0-2.9-3.1,3.1,3.1,0,0,0-3,3,3,3,0,0,0,2.9,3A3.1,3.1,0,0,0,299.7,419.7Z" transform="translate(-292.4 -415.3)" fill="#c6c6c6"/></svg>
+                                        </i>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="text-center">
+                                        <i class="fas fa-circle" style="color: #EC9023"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">Medium</div>
+                                </td>
+                                <td>
+                                    <div>SKU-96942498724</div>
+                                </td>
+                                <td>
+                                    <div>Ban</div>
+                                </td>
+                                <td>
+                                    <div>Ban Achiles</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">50</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">14 Hari</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">100</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-center">
+                                        <i class="fas fa-circle" style="color: #EC9023"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">Medium</div>
+                                </td>
+                                <td>
+                                    <div>SKU-96942498724</div>
+                                </td>
+                                <td>
+                                    <div>Ban</div>
+                                </td>
+                                <td>
+                                    <div>Ban Achiles</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">50</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">14 Hari</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">100</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-center">
+                                        <i class="fas fa-circle" style="color: #EC9023"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">Medium</div>
+                                </td>
+                                <td>
+                                    <div>SKU-96942498724</div>
+                                </td>
+                                <td>
+                                    <div>Ban</div>
+                                </td>
+                                <td>
+                                    <div>Ban Achiles</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">50</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">14 Hari</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">100</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-center">
+                                        <i class="fas fa-circle" style="color: #EC9023"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">Medium</div>
+                                </td>
+                                <td>
+                                    <div>SKU-96942498724</div>
+                                </td>
+                                <td>
+                                    <div>Ban</div>
+                                </td>
+                                <td>
+                                    <div>Ban Achiles</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">10</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">50</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">14 Hari</div>
+                                </td>
+                                <td>
+                                    <div class="text-center">100</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {{-- /.row --}}
+            <div class="row">
+                <div class="col-lg-12 mt-1 mb-4">
+                    <div class="justify-content-center d-flex nav-page-table">
+                        <a href="">
+                            <i>
+                                <svg width="13px" height="13px" viewBox="0 0 4.9 10.5" style="transform: rotate(90deg)"><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#AAAAAA"/></svg>
+                            </i>
+                            <span class="small-text mx-2">Prev</span>
+                        </a>
+                        <a href="" class="active mx-2">
+                            <span class="small-text">1</span>
+                        </a>
+                        <a href="" class="mx-2">
+                            <span class="small-text">2</span>
+                        </a>
+                        <a href="" class="mx-2">
+                            <span class="small-text">3</span>
+                        </a>
+                        <a href="" class="mx-2">
+                            <span class="small-text">4</span>
+                        </a>
+                        <a href="" class="mx-2">
+                            <span class="small-text">5</span>
+                        </a>
+                        <a href="" class="mx-2">
+                            <span class="small-text">Next</span>
+                            <i>
+                                <svg width="13px" height="13px" viewBox="0 0 4.9 10.5" style="transform: rotate(-90deg)"><path d="M298.2,426.4l-2.4-2.5h1.7v-8H299v8h1.7Z" transform="translate(-295.8 -415.9)" fill="#AAAAAA"/></svg>
+                            </i>
+                        </a>
+                    </div>
+                </div>
             </div>
             {{-- /.row --}}
         </div>

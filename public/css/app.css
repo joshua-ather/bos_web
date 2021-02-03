@@ -11,6 +11,12 @@
   --button: #9CB9D8;
   --accent: #458796;
   --font-family: "Lato";
+  --font-light: 300;
+  --font-reguler: 400;
+  --font-bold: 500;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 36px;
 }
 
 @font-face {
@@ -30,11 +36,20 @@
 }
 body {
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: var(--font-size-small);
+  color: var(--black);
+}
+body .medium-text {
+  font-size: var(--font-size-medium);
+  color: inherit;
+}
+body .small-text {
+  font-size: var(--font-size-small);
+  color: inherit;
 }
 
 h1 {
-  font-size: 36px !important;
+  font-size: var(--font-size-large) !important;
 }
 
 .main-sidebar * {
@@ -46,6 +61,176 @@ h1 {
 }
 .main-sidebar * .side-title {
   color: var(--green);
+}
+
+.content-header .title-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card .card-title {
+  font-weight: var(--font-bold);
+}
+.card .card-sub {
+  font-weight: var(--font-light);
+}
+
+.element-knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -16px;
+  text-align: center;
+  appearance: none;
+  font-weight: var(--font-reguler);
+}
+
+.thin-text {
+  font-weight: var(--font-light);
+  color: var(--gray);
+}
+
+.text-bold {
+  font-weight: var(--font-bold);
+}
+
+table {
+  border-spacing: 0;
+}
+
+table.table-510 {
+  border-bottom: 1px solid var(--white);
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-collapse: collapse;
+}
+table.table-510 th:first-child {
+  border-radius: 10px 0 0 0;
+  -moz-border-radius: 10px 0 0 0;
+  -webkit-border-radius: 10px 0 0 0;
+  border: hidden;
+}
+table.table-510 th:last-child {
+  border-radius: 0 10px 0 0;
+  -moz-border-radius: 0 10px 0 0;
+  -webkit-border-radius: 0 10px 0 0;
+  border: hidden;
+}
+table.table-510 th, table.table-510 td {
+  font-weight: var(--font-reguler);
+  font-size: var(--font-size-small);
+  vertical-align: middle;
+}
+table.table-510 thead tr {
+  background-color: var(--secondary);
+  border-top: 0;
+}
+table.table-510 thead tr th {
+  padding: 1.4rem 0.8rem;
+  color: var(--base);
+  position: relative;
+  border-top: 0;
+  border-bottom: 0;
+}
+table.table-510 thead tr th:nth-child(1) {
+  max-width: 65px;
+}
+table.table-510 thead tr th:nth-child(2) {
+  max-width: 120px;
+}
+table.table-510 thead tr th:nth-child(3) {
+  max-width: 80px;
+}
+table.table-510 thead tr th:nth-child(4) {
+  max-width: 90px;
+}
+table.table-510 thead tr th:nth-child(5) {
+  max-width: 110px;
+}
+table.table-510 thead tr th:nth-child(6) {
+  max-width: 80px;
+}
+table.table-510 thead tr th:nth-child(7) {
+  max-width: 58px;
+}
+table.table-510 thead tr th:nth-child(8) {
+  max-width: 58px;
+}
+table.table-510 thead tr th:nth-child(9) {
+  max-width: 65px;
+}
+table.table-510 thead tr th:nth-child(10) {
+  max-width: 80px;
+}
+table.table-510 thead tr th:nth-child(11) {
+  max-width: 80px;
+}
+table.table-510 thead tr th:nth-child(12) {
+  max-width: 80px;
+}
+table.table-510 .title-head {
+  position: relative;
+  margin-bottom: 5px;
+}
+table.table-510 .title-head > span {
+  margin-right: 10px;
+  min-width: 25px;
+  display: block;
+}
+table.table-510 .filter-icon {
+  right: -5px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+table.table-510 input {
+  width: 100%;
+  border-radius: 3px;
+  border: 0 solid #c4c4c4;
+  padding: 2px 5px 2px 20px;
+  transition: 1s;
+}
+table.table-510 .search-area {
+  position: relative;
+}
+table.table-510 .search-area .input-icon {
+  left: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  cursor: hand;
+}
+table.table-510 .search-area select {
+  width: 100%;
+  border-radius: 3px;
+  border: 0 solid #c4c4c4;
+  transition: 1s;
+  cursor: hand;
+}
+table.table-510 .search-area.alarm::after {
+  content: url("../img/asset/down.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4px 2px;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.nav-page-table a {
+  color: var(--black);
+}
+.nav-page-table a.active {
+  background-color: var(--secondary);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 0 5px;
 }
 
 /*# sourceMappingURL=app.css.map */
