@@ -3,7 +3,7 @@
     {{-- Brand Logo --}}
     <div class="brand-link">
         <a href="/" id="logo_brand">
-            <img src="{{ asset('img/logo/logo.png') }}" alt="BOS Logo" class="brand-image">
+            <img src="{{ asset('img/logo.png') }}" alt="BOS Logo" class="brand-image">
         </a>
     </div>
 
